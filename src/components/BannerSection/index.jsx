@@ -10,7 +10,7 @@ export const BannerSection = () => {
                 </div>
                 <div className={styles.banner__content}>
                     <div>
-                        <h1 className='title1'>Fashion Store</h1>
+                        <h1 className={styles.brandName}>Fashion Store</h1>
                         <p className='paragraph'>Fique por dentro das nossas últimas promoções e novidades</p>
                     </div>
                     <a className={styles.button} href="#">CONFIRA AS OFERTAS</a>

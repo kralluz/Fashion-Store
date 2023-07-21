@@ -1,0 +1,11 @@
+.product__img{
+    width: 255px;
+    
+}
+
+.li{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}

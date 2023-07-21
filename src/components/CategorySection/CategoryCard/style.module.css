@@ -1,0 +1,11 @@
+.li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.categories__img{
+    width: 174px;
+}

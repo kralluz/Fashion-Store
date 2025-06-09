@@ -1,0 +1,12 @@
+{
+  "builder": {
+    "gc": {
+      "defaultKeepStorage": "20GB",
+      "policy": [
+        {"keepStorage": "10GB", "filter": ["unused-for=2400h"]},
+        {"keepStorage": "50GB", "filter": ["unused-for=3600h"]},
+        {"keepStorage": "100GB", "all": true}
+      ]
+    }
+  }
+}

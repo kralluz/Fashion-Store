@@ -1,0 +1,16 @@
+services:
+  fashion-store:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      # Cache buildkit para builds mais rápidos
+      cache_from:
+        - node:18-alpine
+    container_name: fashion-store-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - HOSTNAME=0.0.0.0    # Restart apenas se necessário
+    restart: unless-stopped
+    # Sem limites para máxima performance em desenvolvimento

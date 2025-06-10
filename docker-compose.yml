@@ -11,6 +11,6 @@ services:
       - "3000:3000"
     environment:
       - NODE_ENV=production
-      - HOSTNAME=0.0.0.0    # Restart apenas se necessário
+      - HOSTNAME=0.0.0.0
     restart: unless-stopped
-    # Sem limites para máxima performance em desenvolvimento
+    

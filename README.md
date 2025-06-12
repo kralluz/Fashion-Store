@@ -1,3 +1,16 @@
+## 🎓 Contexto Acadêmico
+
+**Curso:** Bacharelado em Sistemas de Informação  
+**Disciplina:** Gestão de Redes de Computadores  
+**Semestre:** 2025/01  
+
+**Equipe:**
+- Carlos Henrique Alves
+- Felipe Gomes  
+- Iago José
+- Victor Augusto
+
+
 # Fashion Store - Sistema de E-commerce
 
 ## ️ Sobre o Projeto

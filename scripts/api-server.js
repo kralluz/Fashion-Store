@@ -4,7 +4,6 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3038;
 
-// Middleware para CORS
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
@@ -17,10 +16,8 @@ app.use((req, res, next) => {
   }
 });
 
-// Middleware para JSON
 app.use(express.json());
 
-// Dados dos produtos (mesmo conteúdo da API original)
 const produtos = {
   calcados: [
     { id: 1, nome: "Tênis Esportivo Premium", preco: "R$ 299,99", imagem: "👟" },
@@ -44,11 +41,9 @@ const produtos = {
     { id: 13, nome: "Moletom Capuz Premium", preco: "R$ 179,99", imagem: "🧥" },
     { id: 14, nome: "Casaco Bomber", preco: "R$ 259,99", imagem: "🧧" },
     { id: 15, nome: "Jaqueta Corta-Vento", preco: "R$ 199,99", imagem: "🧥" },
-    { id: 16, nome: "Cardigan Tricot", preco: "R$ 149,99", imagem: "🧥" }
-  ]
+    { id: 16, nome: "Cardigan Tricot", preco: "R$ 149,99", imagem: "🧥" }  ]
 };
 
-// Rota principal da API
 app.get('/api/hello', (req, res) => {
   try {
     res.json({
@@ -62,8 +57,6 @@ app.get('/api/hello', (req, res) => {
     res.status(500).json({ error: 'Erro interno do servidor' });
   }
 });
-
-// Rota para produtos por categoria
 app.get('/api/produtos/:categoria', (req, res) => {
   const { categoria } = req.params;
   
@@ -77,8 +70,6 @@ app.get('/api/produtos/:categoria', (req, res) => {
     res.status(404).json({ error: 'Categoria não encontrada' });
   }
 });
-
-// Rota para todos os produtos (usada pelo healthcheck)
 app.get('/api/products', (req, res) => {
   try {
     res.json({
@@ -92,8 +83,6 @@ app.get('/api/products', (req, res) => {
     res.status(500).json({ error: 'Erro interno do servidor' });
   }
 });
-
-// Rota de health check
 app.get('/health', (req, res) => {
   res.json({ 
     status: 'OK', 
@@ -102,8 +91,6 @@ app.get('/health', (req, res) => {
     service: 'Fashion Store API'
   });
 });
-
-// Rota padrão
 app.get('/', (req, res) => {
   res.json({ 
     message: 'Fashion Store API Server',
@@ -116,7 +103,6 @@ app.get('/', (req, res) => {
   });
 });
 
-// Iniciar servidor
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Fashion Store API Server rodando na porta ${PORT}`);
   console.log(`📡 Health check: http://localhost:${PORT}/health`);

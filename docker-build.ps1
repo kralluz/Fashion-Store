@@ -1,7 +1,5 @@
-# Script PowerShell para build rápido
 Write-Host "🚀 Iniciando build otimizado..." -ForegroundColor Green
 
-# Build com cache
 docker-compose build --parallel fashion-store
 
 Write-Host "✅ Build concluído!" -ForegroundColor Green

@@ -1,10 +1,8 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
   experimental: {
     outputFileTracingRoot: undefined,
   },
-  // Configuração para múltiplas portas
   async rewrites() {
     return [
       {

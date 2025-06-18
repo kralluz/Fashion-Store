@@ -1,5 +1,4 @@
 export default function Home() {
-  // Dados dos produtos organizados por categoria
   const produtos = {
     calcados: [
       { id: 1, nome: 'Tênis Esportivo', preco: 'R$ 199,90', imagem: '👟' },
@@ -37,10 +36,8 @@ export default function Home() {
   const handleAddToCart = (produto) => {
     alert(`${produto.nome} adicionado ao carrinho! ${produto.preco}`);
   };
-
   return (
     <div className="main-container">
-      {/* Cabeçalho */}
       <header className="header">
         <div className="header-content">
           <h1 className="store-title">Fashion Store</h1>
@@ -49,11 +46,9 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Conteúdo Principal */}
       <main className="main-content">
         <div className="content-wrapper">
           
-          {/* Seções de Produtos */}
           {categorias.map((categoria) => (
             <section key={categoria.key} className="category-section">
               <h2 className="category-title">
@@ -83,10 +78,8 @@ export default function Home() {
               </div>
             </section>
           ))}
-        </div>
-      </main>
+        </div>      </main>
 
-      {/* Rodapé */}
       <footer className="footer">
         <div className="footer-content">
           <h3 className="footer-title">Fashion Store</h3>
